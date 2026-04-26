@@ -90,12 +90,118 @@ body {
   padding: 14px;
 }
 
+.submit-look-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ef4444, #f59e0b);
+  box-shadow: 0 10px 24px rgba(239, 68, 68, 0.24);
+}
+
+.submit-look-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(239, 68, 68, 0.28);
+}
+
+.review-card {
+  border-radius: var(--radius);
+  border: 1px solid rgba(228, 231, 236, 0.9);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 240, 0.9), rgba(255, 255, 255, 0.9)),
+    rgba(255, 255, 255, 0.8);
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.review-card.is-empty {
+  color: var(--muted);
+}
+
+.review-card__placeholder,
+.review-card__summary,
+.review-card__details {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.review-card__topline {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.review-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.review-card__score {
+  margin-top: 4px;
+  font-size: 13px;
+  color: rgba(102, 112, 133, 0.95);
+}
+
+.review-card__result {
+  display: grid;
+  gap: 10px;
+}
+
+.review-modal[hidden] {
+  display: none;
+}
+
+.review-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+.review-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.42);
+  backdrop-filter: blur(3px);
+}
+
+.review-modal__dialog {
+  position: relative;
+  width: min(92vw, 560px);
+  margin: min(10vh, 72px) auto 0;
+  z-index: 1;
+}
+
+.review-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(16, 24, 40, 0.08);
+  color: rgba(16, 24, 40, 0.72);
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.review-modal__close:hover {
+  background: rgba(16, 24, 40, 0.14);
+}
+
 .model-toolbar {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .model-actions {
@@ -120,11 +226,11 @@ body {
 }
 
 .model-stage {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  align-items: stretch;
+  align-items: start;
   min-height: 0;
 }
 
