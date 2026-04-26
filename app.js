@@ -10,7 +10,7 @@
   // - customTransform: 可選，用來覆寫 styles.css 內針對該分類的預設對齊
   const WARDROBE_DATA = {
     baseModel: {
-      front: "./模特兒/model.png",
+      front: "./模特兒/model.PNG",
     },
     items: [
       {
